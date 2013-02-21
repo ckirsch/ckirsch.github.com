@@ -40,16 +40,16 @@ ck:	pdf
 again:	
 	pdflatex ck
 	pdflatex publications
-	pdflatex lectures
+	pdflatex talks
 
 bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl
 
-pdf:    ck.pdf publications.pdf lectures.pdf
+pdf:    ck.pdf publications.pdf talks.pdf
 
 all:    pdf bib again
 	pdflatex ck
 	pdflatex publications
-	pdflatex lectures
+	pdflatex talks
 
 gzip:   pdf ck.pdf.gz
 
