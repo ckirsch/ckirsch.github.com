@@ -41,17 +41,15 @@ again:
 	pdflatex ck
 	pdflatex publications
 	pdflatex lectures
-	pdflatex resume
 
-bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl close-pubs.bbl other-pubs.bbl
+bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl
 
-pdf:    ck.pdf publications.pdf lectures.pdf resume.pdf
+pdf:    ck.pdf publications.pdf lectures.pdf
 
 all:    pdf bib again
 	pdflatex ck
 	pdflatex publications
 	pdflatex lectures
-	pdflatex resume
 
 gzip:   pdf ck.pdf.gz
 
