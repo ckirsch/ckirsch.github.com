@@ -1,8 +1,8 @@
 ##########################################################################
-# Makefile for CV
+# Makefile for CV by Christoph Kirsch
 #
-# Caution: Don't remove any tab characters.
-# A tab character is used to distinguish dependencies from commands.
+# Do not remove any tab characters.
+# Tab characters distinguish dependencies from commands.
 ##########################################################################
 # Define the pattern rules
 #
@@ -21,6 +21,9 @@
 %.pdf : %.tex $(FIGURES)
 	pdflatex $<
 
+%.html : %.pdf
+	pdftohtml -c $<
+
 %.ps : %.dvi
 	dvips -P cmz -t letter -o $@ $<
 
@@ -33,7 +36,7 @@
 # Example:
 # The first rule is the default rule and will be invoked by 'gmake'.
 
-.PHONY : ck again bib pdf all gzip tex ps clean
+.PHONY : ck again bib pdf html all gzip tex ps clean htmlclean realclean
 
 ck:	pdf
 
@@ -42,14 +45,13 @@ again:
 	pdflatex publications
 	pdflatex talks
 
-bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl
+bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl again
 
 pdf:    ck.pdf publications.pdf talks.pdf
 
-all:    pdf bib again
-	pdflatex ck
-	pdflatex publications
-	pdflatex talks
+html:   publications.html
+
+all:    pdf bib again html
 
 gzip:   pdf ck.pdf.gz
 
@@ -62,5 +64,8 @@ clean:
                    *.log *.lot *.ps *.ps.gz *.toc *.pstex *.pstex_t \
                    *.eepic *.fig.bak *.pdfsync *.out
 
-realclean: clean
+htmlclean:
+	/bin/rm -f publications.html publications-* publications_* publications0*
+
+realclean: clean htmlclean
 	/bin/rm -f *.pdf
