@@ -22,7 +22,7 @@
 	pdflatex $<
 
 %.html : %.pdf
-	pdftohtml -c $<
+	pdftohtml -s -noframes $<
 
 %.ps : %.dvi
 	dvips -P cmz -t letter -o $@ $<
@@ -65,7 +65,7 @@ clean:
                    *.eepic *.fig.bak *.pdfsync *.out
 
 htmlclean:
-	/bin/rm -f publications.html publications-* publications_* publications0*
+	/bin/rm -f publications.html publications*.png
 
 realclean: clean htmlclean
 	/bin/rm -f *.pdf
