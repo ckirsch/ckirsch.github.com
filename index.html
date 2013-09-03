@@ -2,108 +2,86 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Christoph Kirsch</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Homepage">
     <meta name="author" content="Christoph Kirsch">
+    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=16">
 
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Le styles -->
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
+    <title>Christoph Kirsch</title>
 
-      @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-          float: none;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    </style>
-    <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!-- Custom styles for this template -->
+    <link href="custom.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
     <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
-    <link rel="shortcut icon" href="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=16">
   </head>
 
   <body>
+
+    <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href=".">Christoph Kirsch</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
-              <li><a href="publications.pdf">Publications</a></li>
-              <li><a href="publications.html">HTML</a></li>
-              <li><a href="ck.bib">BibTeX</a></li>
-              <li><a href="talks.pdf">Talks</a></li>
-              <li><a href="ck.pdf">CV</a></li>
-              <li><a href="ck.html">Bio</a></li>
-            </ul>
-            <ul class="nav pull-right">
-              <li><a href="https://gist.github.com/ckirsch">Gists</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  Projects
-                  <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a tabindex="-1" href="http://acdc.cs.uni-salzburg.at">ACDC</a></li>
-                  <li><a tabindex="-1" href="http://libscm.cs.uni-salzburg.at">libscm</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="http://scal.cs.uni-salzburg.at">Scal</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="http://cpcc.berkeley.edu">CPCC</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="http://javiator.cs.uni-salzburg.at">JAviator</a></li>
-                  <li><a tabindex="-1" href="http://jarol.cs.uni-salzburg.at">Jarol</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="http://tiptoe.cs.uni-salzburg.at">Tiptoe</a></li>
-                  <li><a tabindex="-1" href="http://tap.cs.uni-salzburg.at">TAP</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="http://htl.cs.uni-salzburg.at">HTL</a></li>
-                  <li><a tabindex="-1" href="http://embedded.eecs.berkeley.edu/giotto/">Giotto</a></li>
-                  <li class="divider"></li>
-                  <li><a tabindex="-1" href="https://github.com/cksystemsgroup">@GitHub</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
+          <a class="navbar-brand" href=".">Christoph Kirsch</a>
         </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="publications.pdf">Publications</a></li>
+            <li><a href="publications.html">HTML</a></li>
+            <li><a href="ck.bib">BibTeX</a></li>
+            <li><a href="talks.pdf">Talks</a></li>
+            <li><a href="ck.pdf">CV</a></li>
+            <li><a href="ck.html">Bio</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://gist.github.com/ckirsch">Gists</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Projects <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://acdc.cs.uni-salzburg.at">ACDC</a></li>
+                <li><a href="http://libscm.cs.uni-salzburg.at">libscm</a></li>
+                <li class="divider"></li>
+                <li><a href="http://scal.cs.uni-salzburg.at">Scal</a></li>
+                <li class="divider"></li>
+                <li><a href="http://cpcc.berkeley.edu">CPCC</a></li>
+                <li class="divider"></li>
+                <li><a href="http://javiator.cs.uni-salzburg.at">JAviator</a></li>
+                <li><a href="http://jarol.cs.uni-salzburg.at">Jarol</a></li>
+                <li class="divider"></li>
+                <li><a href="http://tiptoe.cs.uni-salzburg.at">Tiptoe</a></li>
+                <li><a href="http://tap.cs.uni-salzburg.at">TAP</a></li>
+                <li class="divider"></li>
+                <li><a href="http://htl.cs.uni-salzburg.at">HTL</a></li>
+                <li><a href="http://embedded.eecs.berkeley.edu/giotto/">Giotto</a></li>
+                <li class="divider"></li>
+                <li><a href="https://github.com/cksystemsgroup">@GitHub</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-lg-3">
           <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <img src="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=260" alt="Christoph Kirsch" class="img-polaroid">
+            <ul class="nav">
+              <img src="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=260" alt="Christoph Kirsch" class="img-responsive">
 
-              <li class="divider"></li>
+              <br>
 
               <address>
                 <strong>Christoph Kirsch</strong><br>
@@ -116,29 +94,31 @@
                 <a href="mailto:ck@cs.uni-salzburg.at">ck@cs.uni-salzburg.at</a>
               </address>
 
-              <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=fork"
-              allowtransparency="true" frameborder="0" scrolling="0" width="60" height="20"></iframe>
-              <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=follow"
-              allowtransparency="true" frameborder="0" scrolling="0" width="140" height="20"></iframe>
+              <li>
+                <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="65" height="20"></iframe>
+                <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe>
+              </li>
 
-              <li class="divider hidden-tablet"></li>
-
-              <div class="container hidden-tablet">
-                <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=150&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=ckirsch%40gmail.com&amp;color=%23711616&amp;src=m8r2l3vmoff4p21nju72c6ejd0%40group.calendar.google.com&amp;color=%2328754E&amp;src=8sic4boj129rm0k4k85g428s7k%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Europe%2FBerlin" style=" border:solid 1px #777 " width="200" height="150" frameborder="0" scrolling="no"></iframe>
-              </div>
+              <li>
+                <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=150&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=ckirsch%40gmail.com&amp;color=%23711616&amp;src=m8r2l3vmoff4p21nju72c6ejd0%40group.calendar.google.com&amp;color=%2328754E&amp;src=8sic4boj129rm0k4k85g428s7k%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Europe%2FBerlin" style=" border:solid 1px #777 " width="220" height="150" frameborder="0" scrolling="no"></iframe>
+              </li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
-        <div class="span9">
-          <div class="row-fluid">
-            <div class="span8">
-              <div class="row-fluid">
-                <div class="span6">
+        <div class="col-md-8 col-lg-9">
+          <div class="row">
+            <div class="col-md-12 col-lg-8">
+              <div class="row">
+                <div class="col-md-12 col-lg-5">
                   <h2>Group</h2>
 
-                  <p>Assistant Professor: <a href="http://www.cs.uni-salzburg.at/~anas/">Ana Sokolova</a></p>
+                  <p>Assistant Professor:
+                    <dd><a href="http://www.cs.uni-salzburg.at/~anas/">Ana Sokolova</a></dd>
+                  </p>
 
-                  <p>Postdoc: <a href="http://www.cs.uni-salzburg.at/~rtrummer/">Rainer Trummer</a></p>
+                  <p>Postdoc:
+                    <dd><a href="http://www.cs.uni-salzburg.at/~rtrummer/">Rainer Trummer</a></dd>
+                  </p>
 
                   <p>PhD Students:
                     <dd><a href="http://www.cs.uni-salzburg.at/~maigner/">Martin Aigner</a>, <a href="http://www.cs.uni-salzburg.at/~ahaas/">Andreas Haas</a>, <a href="http://www.cs.uni-salzburg.at/~ckrainer/">Clemens Krainer</a>, <a href="http://www.cs.uni-salzburg.at/~mlippautz/">Michael Lippautz</a></dd>
@@ -148,7 +128,7 @@
                     <dd><a href="http://www.cs.uni-salzburg.at/~scraciunas/">Silviu Craciunas</a>, <a href="http://www.aut.upt.ro/staff/diercan/index.html">Daniel Iercan</a> (co-advised), <a href="http://www.di.fc.ul.pt/~edrdo/">Eduardo Marques</a> (co-advised), <a href="http://www.cs.uni-salzburg.at/~hpayer/">Hannes Payer</a>, <a href="http://www.cs.uni-salzburg.at/~hroeck/">Harald R&ouml;ck</a>, <a href="http://www.cs.uni-salzburg.at/~rtrummer/">Rainer Trummer</a></dd>
                   </p>
                 </div><!--/span-->
-                <div class="span6">
+                <div class="col-md-12 col-lg-7">
                   <h2>Research</h2>
 
                   <p>Concurrency: <a href="content/publications/conferences/PaCT13-FastScalableQueues.pdf">k-FIFO Queues</a>, <a href="content/publications/invited/CF13-DistributedQueues.pdf">DQs</a>, <a href="content/publications/conferences/POPL13-QuantitativeRelaxation.pdf">Quantitative Relaxation</a><br>
@@ -174,8 +154,8 @@
                   Decidability: <a href="content/publications/conferences/LICS99-TwoVariableGuardedFragment.pdf">Guarded Fragment</a>, <a href="content/publications/conferences/CADE97-SoftTyping.pdf">Soft Typing</a></p>
                 </div><!--/span-->
               </div><!--/row-->
-              <div class="row-fluid">
-                <div class="span6">
+              <div class="row">
+                <div class="col-md-12 col-lg-5">
                   <h2>Teaching</h2>
                   
                   <p>Winter 2013:
@@ -188,7 +168,7 @@
 
                   <p><a href="classes.html">Past Classes</a></p>
                 </div><!--/span-->
-                <div class="span6">
+                <div class="col-md-12 col-lg-7">
                   <h2>Community</h2>
                   
                   Treasurer: <a href="http://www.eurosys.org/">European Chapter of ACM SIGOPS</a><br>
@@ -206,7 +186,7 @@
                 </div><!--/span-->
               </div><!--/row-->
             </div><!--/span-->
-            <div class="span4">
+            <div class="col-md-12 col-lg-4">
               <a class="twitter-timeline" width="280" data-dnt="true" href="https://twitter.com/christophkirsch" data-widget-id="302626165007454209">Tweets by @christophkirsch</a>
               <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div><!--/span-->
@@ -215,16 +195,16 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Christoph Kirsch 2013. Website built with <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="http://jquery.com">jQuery</a>.</p>
+        <p>&copy; Christoph Kirsch 2013. Website built with <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://jquery.com">jQuery</a>.</p>
       </footer>
 
-    </div><!--/.fluid-container-->
+    </div><!--/.container-->
 
-    <!-- Le javascript
+    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
 
     <script type="text/javascript">
 
