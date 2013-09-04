@@ -8,21 +8,21 @@
 #
 # Example:
 # The first rule tells 'make' how to generate .dvi files from .tex files.
-# The generation depends on the .tex file as well as on the $(FIGURES).
+# The generation depends on the .tex file.
 # % matches any non-empty substring, e.g., 'foo'.
 # Then $< is 'foo.tex', $@ is 'foo.dvi', and $* is 'foo'.
 
-%.dvi :	%.tex $(FIGURES) %.bib
+%.dvi %.aux : %.tex ck.bib
 	latex $<
 
-%.bbl : ck.bib
+%.bbl %.blg : ck.bib
 	bibtex $*
 
-%.pdf : %.tex $(FIGURES)
+%.pdf %.aux : %.tex ck.bib
 	pdflatex $<
 
-%.html : %.pdf
-	pdftohtml -s -noframes $<
+%.html : %.tex ck.bib
+	htlatex $<
 
 %.ps : %.dvi
 	dvips -P cmz -t letter -o $@ $<
@@ -36,7 +36,7 @@
 # Example:
 # The first rule is the default rule and will be invoked by 'gmake'.
 
-.PHONY : ck again bib pdf html all gzip tex ps clean htmlclean realclean
+.PHONY : ck again pdf bib html all gzip ps clean htmlclean realclean
 
 ck:	pdf
 
@@ -45,9 +45,9 @@ again:
 	pdflatex publications
 	pdflatex talks
 
-bib:	conferences.bbl journals.bbl invited.bbl books.bbl chapters.bbl systems.bbl posters.bbl reports.bbl theses.bbl again
-
 pdf:    ck.pdf publications.pdf talks.pdf
+
+bib:	pdf ck1-blx.bbl ck2-blx.bbl ck3-blx.bbl ck4-blx.bbl ck5-blx.bbl ck6-blx.bbl ck7-blx.bbl ck8-blx.bbl ck9-blx.bbl publications1-blx.bbl publications2-blx.bbl publications3-blx.bbl publications4-blx.bbl publications5-blx.bbl publications6-blx.bbl publications7-blx.bbl publications8-blx.bbl publications9-blx.bbl
 
 html:   publications.html
 
@@ -55,17 +55,16 @@ all:    pdf bib again html
 
 gzip:   pdf ck.pdf.gz
 
-tex:    eepic ck.dvi
-
 ps:     bib ck.ps
 
 clean:
 	/bin/rm -f *~ *.aux *.bbl *.blg *.dvi *.idx *.ilg *.ind *.lof \
                    *.log *.lot *.ps *.ps.gz *.toc *.pstex *.pstex_t \
-                   *.eepic *.fig.bak *.pdfsync *.out
+                   *.eepic *.fig.bak *.pdfsync *.out *-blx.bib *.4ct \
+                   *.4tc *.idv *.xdv *.xref *.tmp *.run.xml
 
 htmlclean:
-	/bin/rm -f publications.html publications*.png
+	/bin/rm -f publications.html
 
 realclean: clean htmlclean
 	/bin/rm -f *.pdf
