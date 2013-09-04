@@ -49,7 +49,7 @@ pdf:    ck.pdf publications.pdf talks.pdf
 
 bib:	pdf ck1-blx.bbl ck2-blx.bbl ck3-blx.bbl ck4-blx.bbl ck5-blx.bbl ck6-blx.bbl ck7-blx.bbl ck8-blx.bbl ck9-blx.bbl publications1-blx.bbl publications2-blx.bbl publications3-blx.bbl publications4-blx.bbl publications5-blx.bbl publications6-blx.bbl publications7-blx.bbl publications8-blx.bbl publications9-blx.bbl
 
-html:   publications.html
+html:   publications.html talks.html
 
 all:    pdf bib again html
 
@@ -61,10 +61,10 @@ clean:
 	/bin/rm -f *~ *.aux *.bbl *.blg *.dvi *.idx *.ilg *.ind *.lof \
                    *.log *.lot *.ps *.ps.gz *.toc *.pstex *.pstex_t \
                    *.eepic *.fig.bak *.pdfsync *.out *-blx.bib *.4ct \
-                   *.4tc *.idv *.xdv *.xref *.tmp *.run.xml
+                   *.4tc *.idv *.xdv *.xref *.tmp *.run.xml *.lg
 
 htmlclean:
-	/bin/rm -f publications.html
+	/bin/rm -f publications.html talks.html
 
 realclean: clean htmlclean
 	/bin/rm -f *.pdf
