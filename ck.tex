@@ -8,8 +8,11 @@
 
 \usepackage{hyperref}
 
-\usepackage[sorting=none]{biblatex}
-\addbibresource{ck}
+% Removes bug in tex4ht
+\expandafter\let\csname NR:Type\endcsname\relax
+
+\usepackage[sorting=none,backend=biber]{biblatex}
+\addbibresource{ck.bib}
 
 \begin{document}
 
