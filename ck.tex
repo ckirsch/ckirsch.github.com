@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 
-\usepackage{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \usepackage{skull}
@@ -14,7 +14,7 @@
 % Removes bug in tex4ht
 \expandafter\let\csname NR:Type\endcsname\relax
 
-\usepackage[sorting=none,backend=biber]{biblatex}
+\usepackage[sorting=none,backend=biber,safeinputenc]{biblatex}
 \addbibresource{ck.bib}
 
 \begin{document}
