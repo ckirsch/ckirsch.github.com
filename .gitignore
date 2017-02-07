@@ -1,6 +1,3 @@
 .DS_Store
 .localized
 _site/
-*.avi
-*.mpg
-*.mp4
