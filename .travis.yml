@@ -1,6 +1,6 @@
 sudo: required
-dist: xenial
-before_install: sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full biber
+os: osx
+before_install: brew update && brew install brew-cask && brew cask install mactex
 script: make realclean && make all && make clean
 deploy:
   provider: pages
