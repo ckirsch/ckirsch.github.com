@@ -1,9 +1,0 @@
-sudo: required
-os: osx
-before_install: brew update && brew cask install mactex
-script: make realclean && make all && make clean
-deploy:
-  provider: pages
-  skip_cleanup: true
-notifications:
-  email: false
