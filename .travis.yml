@@ -1,6 +1,8 @@
 sudo: required
-dist: trusty
 before_install: sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full biber
 script: make realclean && make all && make clean
+deploy:
+  provider: pages
+  skip_cleanup: true
 notifications:
   email: false

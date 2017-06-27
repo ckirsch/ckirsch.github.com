@@ -3,6 +3,9 @@
 #
 # Do not remove any tab characters.
 # Tab characters distinguish dependencies from commands.
+
+PDFOPT := -interaction=nonstopmode -halt-on-error
+
 ##########################################################################
 # Define the pattern rules
 #
@@ -19,7 +22,7 @@
 	biber $*
 
 %.pdf %.aux : %.tex ck.bib
-	pdflatex $<
+	pdflatex $(PDFOPT) $<
 
 %.html : %.tex ck.bib
 	htlatex $<
@@ -40,15 +43,15 @@
 
 ck:	pdf
 
-again:	
-	pdflatex ck
-	pdflatex publications
-	pdflatex talks
+again:
+	pdflatex $(PDFOPT) ck
+	pdflatex $(PDFOPT) publications
+	pdflatex $(PDFOPT) talks
 
-andagain:	
-	pdflatex ck
-	pdflatex publications
-	pdflatex talks
+andagain:
+	pdflatex $(PDFOPT) ck
+	pdflatex $(PDFOPT) publications
+	pdflatex $(PDFOPT) talks
 
 pdf:    ck.pdf publications.pdf talks.pdf
 
