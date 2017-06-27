@@ -1,7 +1,4 @@
 before_install:
   - sudo apt-get update -qq
-  - sudo apt-get install texlive-latex-base
-script:
-  - make realclean
-  - make all
-  - make clean
+  - sudo apt-get install texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+script: make realclean && make all && make clean
