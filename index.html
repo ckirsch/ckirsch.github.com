@@ -1,90 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Homepage">
     <meta name="author" content="Christoph Kirsch">
     <link rel="shortcut icon" href="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=16">
 
     <title>Christoph Kirsch</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="dist/css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="custom.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   </head>
 
   <body>
-
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href=".">Christoph Kirsch</a>
+    <nav class="navbar sticky-top navbar-toggleable-md navbar-light bg-faded">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">Christoph Kirsch</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="publications.pdf">Publications (pdf)</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications (html)</a></li>
+          <li class="nav-item"><a class="nav-link" href="ck.bib">BibTeX</a></li>
+          <li class="nav-item"><a class="nav-link" href="talks.pdf">Talks (pdf)</a></li>
+          <li class="nav-item"><a class="nav-link" href="talks.html">Talks (html)</a></li>
+          <li class="nav-item"><a class="nav-link" href="ck.pdf">CV (pdf)</a></li>
+          <li class="nav-item"><a class="nav-link" href="ck.html">Bio (html)</a></li>
+        </ul>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Software and Projects</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="http://selfie.cs.uni-salzburg.at">Selfie</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://scalloc.cs.uni-salzburg.at">Scalloc</a>
+            <a class="dropdown-item" href="http://scal.cs.uni-salzburg.at">Scal</a>
+            <a class="dropdown-item" href="http://acdc.cs.uni-salzburg.at">ACDC</a>
+            <a class="dropdown-item" href="http://libscm.cs.uni-salzburg.at">libscm</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://cpcc.cs.uni-salzburg.at">CPCC</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://javiator.cs.uni-salzburg.at">JAviator</a>
+            <a class="dropdown-item" href="http://jarol.cs.uni-salzburg.at">Jarol</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://tiptoe.cs.uni-salzburg.at">Tiptoe</a>
+            <a class="dropdown-item" href="http://tap.cs.uni-salzburg.at">TAP</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="http://htl.cs.uni-salzburg.at">HTL</a>
+            <a class="dropdown-item" href="http://embedded.eecs.berkeley.edu/giotto/">Giotto</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="https://gist.github.com/ckirsch">Gists</a>
+          </div>
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="publications.pdf">Publications (pdf)</a></li>
-            <li><a href="publications.html">Publications (html)</a></li>
-            <li><a href="ck.bib">BibTeX</a></li>
-            <li><a href="talks.pdf">Talks (pdf)</a></li>
-            <li><a href="talks.html">Talks (html)</a></li>
-            <li><a href="ck.pdf">CV (pdf)</a></li>
-            <li><a href="ck.html">Bio (html)</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Software and Projects <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://selfie.cs.uni-salzburg.at">Selfie</a></li>
-                <li class="divider"></li>
-                <li><a href="http://scalloc.cs.uni-salzburg.at">Scalloc</a></li>
-                <li><a href="http://scal.cs.uni-salzburg.at">Scal</a></li>
-                <li><a href="http://acdc.cs.uni-salzburg.at">ACDC</a></li>
-                <li><a href="http://libscm.cs.uni-salzburg.at">libscm</a></li>
-                <li class="divider"></li>
-                <li><a href="http://cpcc.cs.uni-salzburg.at">CPCC</a></li>
-                <li class="divider"></li>
-                <li><a href="http://javiator.cs.uni-salzburg.at">JAviator</a></li>
-                <li><a href="http://jarol.cs.uni-salzburg.at">Jarol</a></li>
-                <li class="divider"></li>
-                <li><a href="http://tiptoe.cs.uni-salzburg.at">Tiptoe</a></li>
-                <li><a href="http://tap.cs.uni-salzburg.at">TAP</a></li>
-                <li class="divider"></li>
-                <li><a href="http://htl.cs.uni-salzburg.at">HTL</a></li>
-                <li><a href="http://embedded.eecs.berkeley.edu/giotto/">Giotto</a></li>
-                <li class="divider"></li>
-                <li><a href="https://gist.github.com/ckirsch">Gists</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
       </div>
-    </div>
+    </nav>
 
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
-          <div class="well sidebar-nav">
-            <ul class="nav">
-              <img src="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=260" alt="Christoph Kirsch" class="img-responsive">
-
-              <br>
-
+          <div class="card">
+            <img class="card-img-top" src="http://www.gravatar.com/avatar/178fde755ce86b7b12bf14a286098637?s=260" alt="Christoph Kirsch">
+            <div class="card-block">
+              <p class="card-text">
               <address>
                 <strong>Christoph Kirsch</strong><br>
                 Professor<br>
@@ -95,20 +77,17 @@
                 Austria (<a href="ck.vcf">vCard</a>)<br>
                 <a href="mailto:ck@cs.uni-salzburg.at">ck@cs.uni-salzburg.at</a>
               </address>
-
-              <li>
+              </p>
+              <p class="card-text">
                 <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=fork" allowtransparency="true" frameborder="0" scrolling="0" width="65" height="20"></iframe>
                 <iframe src="http://ghbtns.com/github-btn.html?user=ckirsch&repo=ckirsch.github.com&type=follow" allowtransparency="true" frameborder="0" scrolling="0" width="150" height="20"></iframe>
-              </li>
-
-              <br>
-
-              <li>
+              </p>
+              <p class="card-text">
                 <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=150&amp;wkst=1&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=ckirsch%40gmail.com&amp;color=%23711616&amp;src=m8r2l3vmoff4p21nju72c6ejd0%40group.calendar.google.com&amp;color=%2328754E&amp;src=8sic4boj129rm0k4k85g428s7k%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=Europe%2FBerlin" style=" border:solid 1px #777 " width="220" height="150" frameborder="0" scrolling="no"></iframe>
-              </li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="col-sm-6 col-md-8 col-lg-9">
           <div class="row">
             <div class="col-md-6 col-lg-8">
@@ -133,7 +112,7 @@
                     <dd><a href="http://www.cs.uni-salzburg.at/~hroeck/">Harald R&ouml;ck</a>, Eurofunk</dd>
                     <dd>Rainer Trummer, Roco</dd>
                   </p>
-                </div><!--/span-->
+                </div>
                 <div class="col-md-12 col-lg-7">
                   <h2>Research</h2>
 
@@ -201,16 +180,15 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Christoph Kirsch 2014. Website built with <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://jquery.com">jQuery</a>.</p>
+        <p>&copy; Christoph Kirsch 2014-2017. Website built with <a href="http://getbootstrap.com">Bootstrap</a> and <a href="http://jquery.com">jQuery</a>.</p>
       </footer>
 
     </div><!--/.container-->
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
     <script type="text/javascript">
 
