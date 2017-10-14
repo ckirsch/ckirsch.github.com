@@ -66,7 +66,7 @@ clean:
 	/bin/rm -f *~ *.aux *.bbl *.blg *.dvi *.idx *.ilg *.ind *.lof *.bcf \
                    *.log *.lot *.ps *.ps.gz *.toc *.pstex *.pstex_t \
                    *.eepic *.fig.bak *.pdfsync *.out *-blx.bib *.4ct \
-                   *.4tc *.idv *.xdv *.xref *.tmp *.run.xml *.lg
+                   *.4tc *.idv *.xdv *.xref *.tmp *.run.xml *.lg *.fdb_latexmk
 
 htmlclean:
 	/bin/rm -f publications.html talks.html
