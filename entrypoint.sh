@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -l
 
 make realclean
 make all

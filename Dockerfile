@@ -1,8 +1,11 @@
+# Container image
 FROM xucheng/texlive-full:latest
 
-# install make
+# Install make
 RUN apk add make
 
-COPY entrypoint.sh /
+# Copy entrypoint.sh to docker container
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT  ["/entrypoint.sh"]
+# Code file to execute when the docker container starts up
+ENTRYPOINT ["/entrypoint.sh"]
