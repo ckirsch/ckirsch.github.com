@@ -1,14 +1,7 @@
 FROM xucheng/texlive-full:latest
 
-WORKDIR /opt
-
+# install make
 RUN apk add make
-
-# add homepage to the image
-COPY . /opt/ckirsch.github.com
-
-# specify user work directory
-WORKDIR /opt/ckirsch.github.com
 
 # build homepage
 RUN make realclean && \
