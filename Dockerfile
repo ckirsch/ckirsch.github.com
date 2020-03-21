@@ -14,6 +14,3 @@ WORKDIR /opt/ckirsch.github.com
 RUN make realclean && \
     make all && \
     make clean
-
-# default command
-CMD /bin/bash
