@@ -24,4 +24,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: ckirsch/ckirsch.github.com@master
-    - run: git commit -a -m "Building homepage" --author="Christoph Kirsch <ckirsch@gmail.com>"
+    - run: |
+      git config --local user.name "Homepage Builder"
+      git config --local user.email "action@github.com"
+      git commit -a -m "Building homepage"
