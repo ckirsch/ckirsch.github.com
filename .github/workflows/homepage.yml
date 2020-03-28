@@ -6,13 +6,11 @@ on:
     paths-ignore:
     - 'index.html'
     - 'LICENSE'
-    - 'README.md'
   pull_request:
     branches: [ master ]
     paths-ignore:
     - 'index.html'
     - 'LICENSE'
-    - 'README.md'
   schedule:
     # trigger fridays at 12am
     - cron:  '0 0 * * 5'
