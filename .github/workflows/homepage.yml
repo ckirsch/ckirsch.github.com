@@ -1,4 +1,4 @@
-name: Github Workflow for ckirsch.github.com
+name: ckirsch.github.com
 
 on:
   push:
