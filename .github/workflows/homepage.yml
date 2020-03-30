@@ -13,7 +13,7 @@ on:
     - 'LICENSE'
   schedule:
     # trigger fridays at 12am
-    - cron:  '0 0 * * 5'
+    - cron: '0 0 * * 5'
 
 jobs:
   build:
