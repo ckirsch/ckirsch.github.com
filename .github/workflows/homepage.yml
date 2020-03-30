@@ -16,7 +16,7 @@ on:
     - cron: '0 0 * * 5'
 
 jobs:
-  build:
+  build-commit-push:
     runs-on: ubuntu-latest
 
     steps:
