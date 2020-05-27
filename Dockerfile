@@ -1,5 +1,5 @@
 # Container image
-FROM xucheng/texlive-full:latest
+FROM listx/texlive:2019
 
 # Install make
 RUN apk add make
