@@ -1,5 +1,3 @@
 #!/bin/sh -l
 
-make realclean
-make all
-make clean
+make realclean && make all && make clean
