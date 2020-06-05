@@ -27,5 +27,5 @@ jobs:
         git config --local user.name "Christoph Kirsch"
         git config --local user.email "ckirsch@gmail.com"
         git commit -a -m "Building homepage" || echo "Nothing to commit"
-    - name: Push
-      run: git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+#    - name: Push
+#      run: git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
