@@ -23,9 +23,11 @@ jobs:
     - uses: actions/checkout@v2
     - uses: ckirsch/ckirsch.github.com@master
     - name: Commit
+      if: ${{ success() }}
       run: |
         git config --local user.name "Christoph Kirsch"
         git config --local user.email "ckirsch@gmail.com"
         git commit -a -m "Building homepage" || echo "Nothing to commit"
-#    - name: Push
-#      run: git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
+    - name: Push
+      if: ${{ success() }}
+      run: git push "https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}"
