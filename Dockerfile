@@ -1,5 +1,5 @@
 # Container image
-FROM christophkirsch/texlive:2020
+FROM christophkirsch/texlive:latest
 
 # Copy entrypoint.sh to docker container
 COPY entrypoint.sh /entrypoint.sh
