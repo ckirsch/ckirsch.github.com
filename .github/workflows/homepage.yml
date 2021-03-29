@@ -2,12 +2,12 @@ name: ckirsch.github.com
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - 'index.html'
     - 'LICENSE'
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
     paths-ignore:
     - 'index.html'
     - 'LICENSE'
@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - uses: ckirsch/ckirsch.github.com@master
+    - uses: ckirsch/ckirsch.github.com@main
     - name: Commit
       if: ${{ success() }}
       run: |
